@@ -39,5 +39,7 @@ function evenOdd() {
 
     return outcome;
 }
-console.log(io, pc);
-console.log(evenOdd());
+
+document.querySelector('#io').innerHTML = `My Number: ${io}`;
+document.querySelector('#pc').innerHTML = `PC's Number: ${pc}`;
+document.querySelector('#outcome').innerHTML = `Sum is: ${sum} => ${evenOdd()}`;
