@@ -32,14 +32,14 @@ function evenOdd() {
     }
 
     if (choice == result) {
-        outcome = 'You Win';
+        outcome = 'Hai Vinto';
     } else {
-        outcome = 'You Lost';
+        outcome = 'Hai Perso';
     }
 
     return outcome;
 }
 
-document.querySelector('#io').innerHTML = `My Number: ${io}`;
+document.querySelector('#io').innerHTML = `Il tuo numero: ${io}`;
 document.querySelector('#pc').innerHTML = `PC's Number: ${pc}`;
-document.querySelector('#outcome').innerHTML = `Sum is: ${sum} => ${evenOdd()}`;
+document.querySelector('#outcome').innerHTML = `Hai Scelto ${choice.toUpperCase()}, somma: ${sum} => ${evenOdd()}`;
