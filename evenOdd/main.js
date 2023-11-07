@@ -20,38 +20,41 @@ if (!isFinite(io)) {
         // do messaggio di errore
         document.querySelector('#outcome').innerHTML = `Hai inserito un numero troppo grande! (${io})`;
     } else {
-
-        // funzione numero random da 1 a 5 per il pc
-        function randomNumber(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) ) + min;
-        }
-        
+        // input, estraggo il numero casuale per il computer attraverso la funzione
         const pc = randomNumber(1, 5);
         
+        // sommo il numero dell'utente e quello del computer
         const sum = io + pc;
         
-        function evenOdd() {
-            let result;
-            let outcome;
-        
-            if (sum % 2 == 0) {
-                result = 'pari';
-            } else {
-                result = 'dispari';
-            }
-        
-            if (choice == result) {
-                outcome = 'Hai Vinto';
-            } else {
-                outcome = 'Hai Perso';
-            }
-        
-            return outcome;
-        }
-        
+
         document.querySelector('#io').innerHTML = `Il tuo numero: ${io}`;
         document.querySelector('#pc').innerHTML = `PC's Number: ${pc}`;
         document.querySelector('#outcome').innerHTML = `Hai Scelto ${choice.toUpperCase()}, somma: ${sum} => ${evenOdd()}`;
     }
 }
 
+
+// funzione numero random da 1 a 5 per il pc
+ function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+// funzione di pari e dispari
+function evenOdd() {
+    let result;
+    let outcome;
+
+    if (sum % 2 == 0) {
+        result = 'pari';
+    } else {
+        result = 'dispari';
+    }
+
+    if (choice == result) {
+        outcome = 'Hai Vinto';
+    } else {
+        outcome = 'Hai Perso';
+    }
+
+    return outcome;
+}
